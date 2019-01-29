@@ -6,7 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.sogeti.training.rental.core.RentalCoreActivator
 Bundle-Vendor: SOGETI
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.common,
+ org.eclipse.emf.common;visibility:=reexport,
  org.eclipse.emf.ecore
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.sogeti.training.rental.core
