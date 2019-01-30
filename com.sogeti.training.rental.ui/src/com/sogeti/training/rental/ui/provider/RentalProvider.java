@@ -33,7 +33,6 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		} else if (parentElement instanceof Node) {
 			result = ((Node) parentElement).getChildren();
 		}
-		
 		return result;
 	}
 

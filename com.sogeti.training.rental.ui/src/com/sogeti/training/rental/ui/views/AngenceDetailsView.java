@@ -23,6 +23,7 @@ public class AngenceDetailsView extends ViewPart {
 		tv.setContentProvider(rentalProvider);
 		tv.setLabelProvider(rentalProvider);
 		tv.setInput(Arrays.asList(RentalCoreActivator.getAgency()));
+		tv.expandAll();
 	}
 
 	@Override
