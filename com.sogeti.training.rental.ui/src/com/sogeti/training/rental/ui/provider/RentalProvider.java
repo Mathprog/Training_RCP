@@ -7,13 +7,16 @@ import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 
 import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.Device;
 import com.opcoach.training.rental.RentalAgency;
+import com.sogeti.training.rental.ui.RentalUIConstants;
+import com.sogeti.training.rental.ui.RentalUiActivator;
 
-public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider {
+public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider, RentalUIConstants {
 
 	@Override
 	public Object[] getElements(Object inputElement) {
@@ -79,6 +82,52 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		}
 	}
 	
+	
+	
+	@Override
+	public Image getImage(Object element) {
+		if(element instanceof RentalAgency) {
+			return RentalUiActivator.getDefault().getImageRegistry().get(IMG_AGENCY);
+		} else if (element instanceof Node) {
+			Node node = (Node) element;
+			switch (node.getLabel()) {
+			case Node.CUSTOMERS:
+				return RentalUiActivator.getDefault().getImageRegistry().get(IMG_CUSTOMER);
+			case Node.OBJETS_A_LOUER:
+				return RentalUiActivator.getDefault().getImageRegistry().get(IMG_RENTAL_OBJECT);
+			case Node.RENTALS:
+				return RentalUiActivator.getDefault().getImageRegistry().get(IMG_RENTAL);
+			default:
+				break;
+			}
+		}
+		return super.getImage(element);
+	}
+	
+	
+	
+	@Override
+	public Color getForeground(Object element) {
+		if( element instanceof RentalAgency) {
+			return Display.getCurrent().getSystemColor(SWT.COLOR_GREEN);
+		} else if (element instanceof Node) {
+			return Display.getCurrent().getSystemColor(SWT.COLOR_CYAN);
+		}
+		return null;
+	}
+
+	@Override
+	public Color getBackground(Object element) {
+		if( element instanceof RentalAgency) {
+			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GRAY);
+		} else if (element instanceof Node) {
+			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GRAY);
+		}
+		return null;
+	}
+	
+	
+	
 	private class Node {
 		public static final String OBJETS_A_LOUER = "Objets à louer";
 		public static final String RENTALS = "Rentals";
@@ -120,24 +169,6 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		
 	}
 
-	@Override
-	public Color getForeground(Object element) {
-		if( element instanceof RentalAgency) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_GREEN);
-		} else if (element instanceof Node) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_CYAN);
-		}
-		return null;
-	}
-
-	@Override
-	public Color getBackground(Object element) {
-		if( element instanceof RentalAgency) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GRAY);
-		} else if (element instanceof Node) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GRAY);
-		}
-		return null;
-	}
+	
 
 }
