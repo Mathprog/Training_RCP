@@ -38,13 +38,10 @@ public class RentalPropertyView extends ViewPart {
 		rentedObjectLabel = new Label(g, SWT.NONE);
 		rentedObjectLabel.setLayoutData(gd);
 		
-		
-		
 		Label renterPersonTitleLabel = new Label(g, SWT.NONE);
 		renterPersonTitleLabel.setText("Loué à: ");
 		renterPersonLabel = new Label(g, SWT.NONE);
 		this.setRental(RentalCoreActivator.getAgency().getRentals().get(0));
-		
 		
 	}
 
