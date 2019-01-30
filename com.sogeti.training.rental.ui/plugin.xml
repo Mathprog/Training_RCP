@@ -15,6 +15,13 @@
             name="Rental Properties"
             restorable="true">
       </view>
+      <view
+            category="com.sogeti.training.rental.ui.category1"
+            class="com.sogeti.training.rental.ui.views.AngenceDetailsView"
+            id="com.sogeti.training.rental.ui.angencedetails"
+            name="Angence Details"
+            restorable="true">
+      </view>
    </extension>
 
 </plugin>
