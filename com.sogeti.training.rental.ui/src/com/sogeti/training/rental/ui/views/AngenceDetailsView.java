@@ -35,6 +35,8 @@ public class AngenceDetailsView extends ViewPart implements RentalUIConstants, I
 		tv.refresh();
 		getSite().setSelectionProvider(tv);
 		
+		
+		
 	}
 	
 	@Override
