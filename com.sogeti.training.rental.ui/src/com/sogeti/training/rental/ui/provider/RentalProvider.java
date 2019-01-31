@@ -2,6 +2,9 @@ package com.sogeti.training.rental.ui.provider;
 
 import java.util.List;
 
+import org.eclipse.jface.resource.ColorRegistry;
+import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -109,7 +112,7 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	@Override
 	public Color getForeground(Object element) {
 		if( element instanceof RentalAgency) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_GREEN);
+			return getAColor(RentalUiActivator.getDefault().getPreferenceStore().getString(C_COLOR_E));
 		} else if (element instanceof Node) {
 			return Display.getCurrent().getSystemColor(SWT.COLOR_CYAN);
 		}
@@ -126,7 +129,15 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		return null;
 	}
 	
-	
+	private Color getAColor(String rgbKey) {
+		ColorRegistry colorRegistry = JFaceResources.getColorRegistry();
+		Color color = colorRegistry.get(rgbKey);
+		if(color == null) {
+			colorRegistry.put(rgbKey, StringConverter.asRGB(rgbKey));
+			color = colorRegistry.get(rgbKey);
+		}
+		return color;
+	}
 	
 	private class Node {
 		public static final String OBJETS_A_LOUER = "Objets à louer";
