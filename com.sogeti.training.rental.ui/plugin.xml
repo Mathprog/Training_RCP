@@ -23,5 +23,14 @@
             restorable="true">
       </view>
    </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.sogeti.training.rental.ui.PerspectiveFactory1"
+            icon="icons/sample.png"
+            id="com.sogeti.training.rental.ui.perspective1"
+            name="Rental">
+      </perspective>
+   </extension>
 
 </plugin>
