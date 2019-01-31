@@ -35,28 +35,6 @@ public class AngenceDetailsView extends ViewPart implements RentalUIConstants, I
 		tv.refresh();
 		getSite().setSelectionProvider(tv);
 		
-		/*RentalUiActivator.getDefault().getPreferenceStore().addPropertyChangeListener(new IPropertyChangeListener() {
-			@Override
-			public void propertyChange(PropertyChangeEvent event) {
-				if(event.getProperty() == C_COLOR_E)
-					tv.refresh();
-			}
-			
-			@Override
-	public void init(IViewSite site) throws PartInitException {
-		// TODO Auto-generated method stub
-		super.init(site);
-		RentalUiActivator.getDefault().getPreferenceStore().addPropertyChangeListener(this);
-	}
-
-	@Override
-	public void dispose() {
-		RentalUiActivator.getDefault().getPreferenceStore().removePropertyChangeListener(this);
-		super.dispose();
-	}
-			
-		});*/
-		
 	}
 	
 	@Override
