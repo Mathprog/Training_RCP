@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cmd
+Bundle-SymbolicName: com.sogeti.training.rental.ui.cmd;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.sogeti.training.rental.ui.cmd.CmdActivator
+Bundle-Vendor: SOGETI
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.sogeti.training.rental.ui;bundle-version="1.0.0";visibility:=reexport,
+ org.eclipse.core.expressions;bundle-version="3.6.200"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.sogeti.training.rental.ui.cmd
+Bundle-ActivationPolicy: lazy
