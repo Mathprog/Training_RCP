@@ -90,6 +90,18 @@
             </command>
          </toolbar>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="Hey">
+            <command
+                  commandId="com.sogeti.training.rental.ui.helloworld"
+                  icon="icons/chromium_16.png"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
    </extension>
 
 </plugin>

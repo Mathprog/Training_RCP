@@ -2,10 +2,12 @@ package com.sogeti.training.rental.ui.views;
 
 import java.util.Arrays;
 
+import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
@@ -35,8 +37,10 @@ public class AngenceDetailsView extends ViewPart implements RentalUIConstants, I
 		tv.refresh();
 		getSite().setSelectionProvider(tv);
 		
-		
-		
+		MenuManager menuManager = new MenuManager();
+		Menu menu = menuManager.createContextMenu(tv.getControl());
+		tv.getControl().setMenu(menu);
+		getSite().registerContextMenu(menuManager, tv);
 	}
 	
 	@Override
