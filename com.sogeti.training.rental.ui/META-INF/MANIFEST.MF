@@ -7,7 +7,7 @@ Bundle-Activator: com.sogeti.training.rental.ui.RentalUiActivator
 Bundle-Vendor: SOGETI
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.sogeti.training.rental.core;bundle-version="1.0.0"
+ com.sogeti.training.rental.core;bundle-version="1.0.0";visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.sogeti.training.rental.ui
 Bundle-ActivationPolicy: lazy
