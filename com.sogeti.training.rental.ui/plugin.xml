@@ -46,5 +46,50 @@
             class="com.sogeti.training.rental.ui.RentalPrefInitializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="com.sogeti.training.rental.ui.category1"
+            id="com.sogeti.training.rental.ui.helloworld"
+            name="Hello Wold">
+      </command>
+      <category
+            id="com.sogeti.training.rental.ui.category1"
+            name="hello">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.sogeti.training.rental.ui.HelloWorldHandler"
+            commandId="com.sogeti.training.rental.ui.helloworld">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Training">
+            <command
+                  commandId="com.sogeti.training.rental.ui.helloworld"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.sogeti.training.rental.ui.toolbar1">
+            <command
+                  commandId="com.sogeti.training.rental.ui.helloworld"
+                  icon="icons/chromium_16.png"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
 
 </plugin>
