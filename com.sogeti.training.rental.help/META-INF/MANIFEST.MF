@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Help
+Bundle-SymbolicName: com.sogeti.training.rental.help;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SOGETI
+Automatic-Module-Name: com.sogeti.training.rental.help
+Require-Bundle: org.eclipse.help.webapp;bundle-version="3.9.300",
+ org.eclipse.epp.mpc.help.ui;bundle-version="1.7.3"
