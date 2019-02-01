@@ -76,10 +76,11 @@
 	
 	<module>com.sogeti.training.rental.core</module>
 	<module>com.sogeti.training.rental.tp</module>
-	
+	<module>com.sogeti.training.rental.repository</module>
 		<module>com.sogeti.training.rental.rcp</module>
 		<module>com.sogeti.training.rental.feature</module>
 		<module>com.sogeti.training.rental.ui</module>
+		<module>com.sogeti.training.rental.ui.cmd</module>
 		<module>com.sogeti.training.rental.help</module>
 	</modules>
 
