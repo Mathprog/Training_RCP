@@ -77,18 +77,10 @@
 	<module>com.sogeti.training.rental.core</module>
 	<module>com.sogeti.training.rental.tp</module>
 	
-	
-		<!-- <module>../com.sogeti.training.rental.targetplatform</module>
-		<module>../com.sogeti.training.rental.rcp</module>
-		<module>../com.sogeti.training.rental.feature</module>
-		<module>../com.sogeti.training.rental.ui</module>
-		<module>../com.sogeti.training.rental.ui.colorprovider</module>
-		<module>../com.sogeti.training.rental.help</module>
-		<module>../com.sogeti.training.rental.core</module>
-		<module>../com.sogeti.training.rental.core.test</module>
-		  <module>../com.sogeti.training.rental.ui.test</module> -->
-		<!--<module>../com.sogeti.training.rental.repository</module>
-		<module>../com.sogeti.training.rental.jnlp</module> -->
+		<module>com.sogeti.training.rental.rcp</module>
+		<module>com.sogeti.training.rental.feature</module>
+		<module>com.sogeti.training.rental.ui</module>
+		<module>com.sogeti.training.rental.help</module>
 	</modules>
 
 </project>
