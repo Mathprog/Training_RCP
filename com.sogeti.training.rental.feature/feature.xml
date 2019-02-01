@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.sogeti.training.rental.feature"
+      label="Feature"
+      version="1.0.0.qualifier"
+      provider-name="SOGETI">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="com.sogeti.training.rental.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.expressions" version="3.6.200" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.common"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="com.sogeti.training.rental.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.felix.scr"/>
+      <import plugin="org.eclipse.equinox.util"/>
+      <import plugin="org.eclipse.equinox.event"/>
+      <import plugin="com.sogeti.training.rental.help" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.sogeti.training.rental.ui.cmd" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help.webapp" version="3.9.300" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help.ui" version="4.1.300" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.sogeti.training.rental.ui.cmd"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.sogeti.training.rental.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.sogeti.training.rental.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.sogeti.training.rental.rcp"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.sogeti.training.rental.help"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>
