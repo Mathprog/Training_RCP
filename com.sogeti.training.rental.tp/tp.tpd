@@ -35,6 +35,8 @@ location "http://download.eclipse.org/releases/2018-12" {
 	org.eclipse.pde.core */
 }
 
+
+
  // Ajout du delta pack
 location "http://download.eclipse.org/eclipse/updates/4.10" {
 	org.eclipse.equinox.sdk.feature.group
