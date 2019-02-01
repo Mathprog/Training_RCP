@@ -1,5 +1,9 @@
 package com.sogeti.training.rental.ui;
 
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtension;
+import org.eclipse.core.runtime.IExtensionRegistry;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -29,6 +33,15 @@ public class RentalUiActivator extends AbstractUIPlugin implements RentalUIConst
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
+		this.readViewExtensions();
+	}
+
+	private void readViewExtensions() {
+		IExtensionRegistry registry = Platform.getExtensionRegistry();
+		for (IConfigurationElement configurationElement : registry.getConfigurationElementsFor("org.eclipse.ui.views")) {
+			System.out.println(configurationElement.getNamespaceIdentifier() + " " + configurationElement.getAttribute("name"));
+		}
+		
 	}
 
 	@Override
@@ -68,4 +81,7 @@ public class RentalUiActivator extends AbstractUIPlugin implements RentalUIConst
 		reg.put(IMG_CUSTOMER, ImageDescriptor.createFromURL(b.getEntry(IMG_CUSTOMER)));
 		super.initializeImageRegistry(reg);
 	}
+	
+	
+	
 }
