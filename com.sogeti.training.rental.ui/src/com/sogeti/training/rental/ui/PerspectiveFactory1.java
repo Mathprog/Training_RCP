@@ -5,6 +5,9 @@ import org.eclipse.ui.IPerspectiveFactory;
 
 public class PerspectiveFactory1 implements IPerspectiveFactory {
 
+	
+	public static final String ID = "com.sogeti.training.rental.ui.perspective1";
+	
 	@Override
 	public void createInitialLayout(IPageLayout layout) {
 		layout.setEditorAreaVisible(false);

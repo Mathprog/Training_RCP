@@ -11,3 +11,4 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.sogeti.training.rental.ui
 Bundle-ActivationPolicy: lazy
+Export-Package: com.sogeti.training.rental.ui
