@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.sogeti.training.rental.feature_1.0.0.201902011453.jar" id="com.sogeti.training.rental.feature" version="1.0.0.201902011453">
+      <category name="com.sogeti.training.rental"/>
+   </feature>
+   <category-def name="com.sogeti.training.rental" label="Rental"/>
+</site>
