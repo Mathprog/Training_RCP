@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="palette" name="palette" schema="schema/palette.exsd"/>
 
    <extension
          point="org.eclipse.ui.views">
@@ -102,6 +103,14 @@
             </command>
          </menu>
       </menuContribution>
+   </extension>
+   <extension
+         point="com.sogeti.training.rental.ui.palette">
+      <palette
+            id="com.sogeti.training.rental.ui.palette1"
+            name="com.sogeti.training.rental.ui.palette1"
+            palette_class="com.sogeti.training.rental.ui.ColorProvider1">
+      </palette>
    </extension>
 
 </plugin>
